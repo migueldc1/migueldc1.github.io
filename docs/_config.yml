@@ -83,7 +83,7 @@ author:
   email            : "migueldcelis@outlook.com
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "fa-regular fa-envelope"
       url: "mailto:migueldcelis@outlook.com"
     - label: "Scholar"
       icon: "fa-brands fa-google-scholar"
