@@ -77,14 +77,26 @@ analytics:
 # Site Author
 author:
   name             : "Miguel de Celis"
-  avatar           : "../assets/images/foto3.jpg"
+  avatar           : "/assets/images/foto3.jpg"
   bio              : "Postdoctoral Researcher"
-  location         : "Somewhere"
-  email            :
+  location         : Institute of Agricultural Sciences (ICA-CSIC)
+  email            : "migueldcelis@outlook.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:migueldcelis@outlook.com"
+    - label: "Scholar"
+      icon: "fa-brands fa-google-scholar"
+      url: "https://scholar.google.com/citations?user=voPqq-wAAAAJ&hl"
+    - label: "Research Gate"
+      icon: "fa-brands fa-researchgate"
+      url: "https://www.researchgate.net/profile/Miguel-De-Celis"
+    - label: "ORCiD"
+      icon: "fa-brands fa-orcid"
+      url: "https://orcid.org/0000-0002-3653-3031"
+    - label: "MINE lab"
+      icon: "fa-brands fa-orcid"
+      url: "http://minelab.bioucm.es/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/migueldc1"
