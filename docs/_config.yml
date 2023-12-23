@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Miguel de Celis"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/foto3.jpg"
   bio              : "Postdoctoral Researcher"
   email            :
   links:
