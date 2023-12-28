@@ -1,0 +1,11 @@
+body {
+    max-width: 400;
+    margin: 0 auto;
+    background: #e6e3dc;
+    color: black;
+}
+
+.link {
+    padding: 5px 10px;
+    background: #948f81;
+}

@@ -1,0 +1,9 @@
+# main links
+main:
+  - title: "Publications"
+    url: /publications/
+    description: "List of publications"
+  - title: "Outreach"
+    url: /outreach/
+    description: "Outreach"
+    
