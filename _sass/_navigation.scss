@@ -198,6 +198,7 @@
 
     &.site-title {
       margin-left: 0;
+        color: aliceblue;
     }
   }
 
@@ -232,10 +233,12 @@
       -webkit-box-flex: 0;
       -ms-flex: none;
       flex: none;
+        font-weight: bold;
     }
 
     a {
       position: relative;
+        color: aliceblue;
 
       &:before {
         content: "";
