@@ -24,9 +24,9 @@ description              : "Personal Research webpage"
 url                      : "https://migueldc1.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "migueldc1/migueldc1.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/preview.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "About"
+masthead_title           : #"About"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
