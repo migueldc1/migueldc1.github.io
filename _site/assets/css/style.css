@@ -1,0 +1,77 @@
+body {
+    background-color: white; /* Set the background color to white */
+    position: relative;
+    background-image: url("/assets/images/Red1.png"), url("/assets/images/Red.png");
+    background-position: top left, bottom right; /* Position the images */
+    background-repeat: no-repeat, no-repeat; /* Don't repeat the images */
+    background-size: 50vw 50vw, 50vw 50vw; /* Control the size of each image */
+}
+
+.link {
+    padding: 5px 10px;
+    background: #ffffff;
+}
+
+/* Container that holds both lists */
+.two-columns {
+    display: flex;           /* Enables flexbox */
+    justify-content: space-between; /* Adds space between columns */
+    gap: auto;               /* Optional: Adds a gap between columns */
+}
+
+.column-title {
+    font-size: larger;        /* Styling for the titles */
+    margin-bottom: 0; 
+}
+
+.column ul {
+    margin-top: 0; /* Removes default margin at the top of the list */
+    margin-bottom: 0; /* Removes default margin at the top of the list */
+    padding-top: 2px; /* Removes any padding at the top of the list */
+    padding-bottom: 2px;
+}
+
+.column-left {
+  width: 40%; /* You can adjust this width depending on your layout */
+}
+
+.column-center {
+  width: 40%; /* Adjust this width as needed */
+  margin-left: auto; /* Pushes the column to the center */
+  margin-right: auto; /* Centers the column */
+}
+
+.fa-ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding-left: 0;       /* Removes default padding */
+}
+
+/* New class for list items with icons */
+.fa-graduation-cap-item::before {
+    content: "\f19d"; /* Unicode for the graduation cap icon */
+    font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome */
+    font-weight: 900; /* Use solid style for the icon */
+    margin-right: 8px; /* Space between icon and text */
+    display: inline-block; /* Ensures the icon displays inline */
+    font-size: 1em; /* Adjust the size of the icon */
+}
+
+/* Style for item descriptions */
+.item-description {
+    display: block; /* Ensures description starts on a new line */
+    font-size: 0.9em; /* Smaller font size for the description */
+    color: #666; /* Gray color for the description text */
+    margin-top: 2px; /* Space between item text and description */
+}
+
+.pub_year {
+    font-size: 1.5em;        /* Styling for the titles */
+    font-weight: bold;
+    margin-bottom: 0 auto; 
+}
+
+.pub_details {
+    font-size: 0.8em;        /* Styling for the titles */
+    font-style: italic;
+    margin-bottom: 0 auto; 
+}
