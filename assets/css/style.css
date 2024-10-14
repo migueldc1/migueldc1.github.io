@@ -15,7 +15,6 @@ body {
 /* Container that holds both lists */
 .two-columns {
     display: flex;           /* Enables flexbox */
-    justify-content: space-between; /* Adds space between columns */
     gap: auto;               /* Optional: Adds a gap between columns */
 }
 
@@ -36,7 +35,7 @@ body {
 }
 
 .column-center {
-  width: 40%; /* Adjust this width as needed */
+  width: 60%; /* Adjust this width as needed */
   margin-left: auto; /* Pushes the column to the center */
   margin-right: auto; /* Centers the column */
 }
@@ -62,6 +61,7 @@ body {
     font-size: 0.9em; /* Smaller font size for the description */
     color: #666; /* Gray color for the description text */
     margin-top: 2px; /* Space between item text and description */
+    padding-right: 0;
 }
 
 .pub_year {
