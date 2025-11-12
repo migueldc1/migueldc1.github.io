@@ -5,8 +5,73 @@ search: false
 
 @charset "utf-8";
 
+
+body.home-page {
+  /* Default body text color */
+  color: #3d3d3d;
+
+  /* Links */
+  a {
+    color: #3d3d3d;
+    &:hover {
+      color: #004499;
+    }
+  }
+    .page__title a {
+        color: #000000;
+        text-decoration: none;
+    }
+    /* Headings inside the main content area */
+    .page__content h1,
+    .page__content h2,
+    .page__content h3,
+    .page__content h4,
+    .page__content h5,
+    .page__content h6 {
+        color: #000000;
+    }
+    .column-title {
+        color: #000000;         // Example: change text color
+    }
+    .item-description {
+        color: #4b4b4b;         // Example: change text color
+    }
+}
+
+body.research-page {
+  /* Default body text color */
+  color: #3d3d3d;
+
+  /* Links */
+  a {
+    color: #3d3d3d;
+    &:hover {
+      color: #004499;
+    }
+  }
+    .page__title a {
+        color: #000000;
+        text-decoration: none;
+    }
+    /* Headings inside the main content area */
+    .page__content h1,
+    .page__content h2,
+    .page__content h3,
+    .page__content h4,
+    .page__content h5,
+    .page__content h6 {
+        color: #000000;
+    }
+    .column-title {
+        color: #000000;         // Example: change text color
+    }
+    .item-description {
+        color: #4b4b4b;         // Example: change text color
+    }
+}
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes";   // main theme partials
 @import "masthead";
 @import "utilities";
 @import "navigation";

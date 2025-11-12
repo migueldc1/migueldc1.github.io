@@ -1,10 +1,13 @@
 body {
-    background-color: white; /* Set the background color to white */
+    background-color: rgba(255,255,255,0.75);
+    background-image: 
+        url("/assets/images/Red1.png"),
+        url("/assets/images/Red.png");
+    background-blend-mode: lighten, lighten, normal;
+    background-position: top left, bottom right, center; /* Position the images */
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Don't repeat the images */
+    background-size: 50vw 50vw, 50vw 50vw, cover; /* Control the size of each image */
     position: relative;
-    background-image: url("/assets/images/Red1.png"), url("/assets/images/Red.png");
-    background-position: top left, bottom right; /* Position the images */
-    background-repeat: no-repeat, no-repeat; /* Don't repeat the images */
-    background-size: 50vw 50vw, 50vw 50vw; /* Control the size of each image */
 }
 
 .link {
@@ -74,4 +77,9 @@ body {
     font-size: 0.8em;        /* Styling for the titles */
     font-style: italic;
     margin-bottom: 0 auto; 
+}
+
+.page__footer {
+    background: rgba(191,255,209,0.5);
+    color: #000000; /* text color inside footer */
 }

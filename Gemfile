@@ -15,9 +15,11 @@ source "https://rubygems.org"
 
 gem "minimal-mistakes-jekyll", :github => "mmistakes/minimal-mistakes"
 gem "github-pages", group: :jekyll_plugins
-gem 'wdm', '>= 0.1.0'
+gem 'wdm', '>= 0.2.0'
 gem "webrick"
 gem "font-awesome-sass", "~> 6.5.1"
+gem "csv"
+gem "logger"
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"

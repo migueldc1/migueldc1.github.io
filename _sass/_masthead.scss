@@ -4,13 +4,13 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  border-bottom: none !important;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
-    background: #1e4649;
+  background: #5fed83;
 
   &__inner-wrap {
     @include clearfix;
@@ -32,11 +32,28 @@
 
     nav {
       z-index: 10;
-        background: #1e4649;
+      background: #5fed83;
     }
 
     a {
-      text-decoration: none;
+      text-decoration: none !important; // remove underline on links
+      border-bottom: none !important; // remove any bottom border
+      color: #ffffff !important; // default link color
+      transition: none !important; // optional: remove hover transitions
+    }
+
+    .masthead__menu-item a,
+    .site-title {
+      color: #ffffff !important; // masthead font color
+      border-bottom: none !important;
+      text-decoration: none !important;
+    }
+
+    .masthead__menu-item a:hover,
+    a:hover {
+      color: #104c35 !important; // keep hover color same as normal
+      border-bottom: none !important;
+      text-decoration: none !important;
     }
   }
 }
@@ -52,7 +69,6 @@
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
-  // z-index: 20;
 }
 
 .site-subtitle {
@@ -92,4 +108,23 @@
     padding-right: 2em;
     font-weight: 700;
   }
+}
+
+.site-title,
+.site-title span,
+.masthead__menu-item a {
+  color: #ffffff !important;
+}
+
+.site-title:hover,
+.site-title.hover,
+.masthead__menu-item a:hover,
+.masthead__menu-item a.hover {
+  color: #ffffff !important;
+}
+
+.site-title::after,
+.masthead__menu-item a::after {
+  display: none !important;
+  content: none !important;
 }
