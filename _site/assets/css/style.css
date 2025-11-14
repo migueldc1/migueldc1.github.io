@@ -71,6 +71,7 @@ body {
     font-size: 1.5em;        /* Styling for the titles */
     font-weight: bold;
     margin-bottom: 0 auto; 
+    color: #572753;
 }
 
 .pub_details {
