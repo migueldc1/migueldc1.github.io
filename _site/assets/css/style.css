@@ -34,11 +34,11 @@ body {
 }
 
 .column-left {
-  width: 40%; /* You can adjust this width depending on your layout */
+  width: 50%; /* You can adjust this width depending on your layout */
 }
 
 .column-center {
-  width: 60%; /* Adjust this width as needed */
+  width: 50%; /* Adjust this width as needed */
   margin-left: auto; /* Pushes the column to the center */
   margin-right: auto; /* Centers the column */
 }
@@ -82,4 +82,14 @@ body {
 .page__footer {
     background: rgba(191,255,209,0.5);
     color: #000000; /* text color inside footer */
+}
+
+/* Mobile hamburger button background */
+.masthead__menu-item {
+    background-color: #5fed83 !important;  /* Your purple */
+    color: #5fed83 !important;
+    font-weight: bold;
+}
+.greedy-nav .hidden-links {
+    padding: 0;
 }
