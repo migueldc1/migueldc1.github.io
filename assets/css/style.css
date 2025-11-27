@@ -91,6 +91,17 @@ body {
     color: #5fed83 !important;
     font-weight: bold;
 }
+
+.masthead__inner-wrap dropdown {
+  background-color: #5fed83 !important;
+    text-decoration: none !important;
+    margin-left: 0;
+  margin-right: 0;
+  border-bottom: none !important;
+  color: #ffffff !important;
+  transition: none !important;
+}
+
 .greedy-nav .hidden-links {
     padding: 0;
 }

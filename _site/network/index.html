@@ -1,0 +1,454 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Local Network Anlysis | Miguel de Celis</title>
+<meta name="description" content="Personal Research webpage">
+
+
+  <meta name="author" content="Miguel de Celis">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Miguel de Celis">
+<meta property="og:title" content="Local Network Anlysis">
+<meta property="og:url" content="http://localhost:4000/network/">
+
+
+  <meta property="og:description" content="Personal Research webpage">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/preview.png">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/network/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Miguel de Celis Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/academicons.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class=" layout--splash" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+            About me
+        </a>
+        <ul class="visible-links">
+                    <li class="masthead__menu-item">
+                        <a href="/research/">Research</a>
+                    </li>
+                
+                    <li class="masthead__menu-item">
+                        <a href="/publications/">Publications</a>
+                    </li>
+                
+                    <li class="masthead__menu-item">
+                        <a href="/outreach/">Outreach</a>
+                    </li>
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Workshops    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/network/">    Local Network Analysis</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Local Network Anlysis">
+    
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <link rel="stylesheet" href="/assets/css/style.css">
+https://github.com/mmistakes/minimal-mistakes/discussions/3160
+<div style="text-align: justify;">
+  
+  <h1 style="margin-top: 1em;">Microbial Network Analysis in R: A Complete Tutorial</h1>
+  
+  <p>This tutorial introduces the construction, visualization, and interpretation of <b>microbial association networks</b> using 
+    several commonly used approaches: correlation-based, distance-based, and probabilistic models. It is designed for users with 
+    introductory R knowledge and microbiome experience.</p>
+
+<hr>
+
+<h2>1. Introduction</h2>
+
+<p>Microbial communities consist of interacting populations whose relationships can be 
+represented as <b>networks</b>.</p>
+
+<ul>
+<li><b>Nodes</b> represent microbial taxa (OTUs/ASVs)</li>
+<li><b>Edges</b> represent significant associations between taxa</li>
+</ul>
+
+<p>Understanding these associations helps disentangle ecological processes, niche 
+differentiation, and community assembly.</p>
+
+<h3>1.1 Types of microbial networks</h3>
+
+<p>Common approaches to infer pairwise microbial associations include:</p>
+
+<ul>
+<li><b>Correlation-based</b>: Spearman, SparCC</li>
+<li><b>Distance-based</b>: Bray–Curtis, Jaccard, Kullback–Leibler</li>
+<li><b>Probability-based</b>: Veech model (co-occurrence probability)</li>
+</ul>
+
+<p>Each method captures different ecological signals and produces different network structures.</p>
+
+<hr>
+
+<h2>2. Requirements and Setup</h2>
+
+<h3>2.1 Install required R packages</h3>
+
+<pre><code class="language-r">install.packages(c(
+  "ggplot2", "igraph", "reshape2", "Hmisc", 
+  "vegan", "RColorBrewer", "pheatmap"
+))
+</code></pre>
+
+<h3>2.2 Load libraries</h3>
+```
+<pre><code class="language-r">library(ggplot2)
+library(igraph)
+library(reshape2)
+library(Hmisc)
+library(vegan)
+library(RColorBrewer)
+library(pheatmap)
+</code></pre>
+```
+<hr>
+
+<h2>3. Downloading the Tutorial Data</h2>
+
+<p>The tutorial uses six example files:</p>
+
+<ul>
+<li>otu_df.csv</li>
+<li>otu_df2.csv</li>
+<li>tax_df.csv</li>
+<li>tax_df2.csv</li>
+<li>meta_df.txt</li>
+<li>meta_df2.txt</li>
+</ul>
+
+<p>Upload your files to GitHub, then replace URLs below.</p>
+
+<h3>3.1 Load the data</h3>
+
+<pre><code class="language-r">otu_df <- read.csv("https://raw.githubusercontent.com/&lt;USER&gt;/&lt;REPO&gt;/main/data/otu_df.csv", row.names = 1)
+otut_df <- otu_df / rowSums(otu_df)
+
+otu_df2 <- read.csv("https://raw.githubusercontent.com/&lt;USER&gt;/&lt;REPO&gt;/main/data/otu_df2.csv", row.names = 1)
+otut_df2 <- otu_df2 / rowSums(otu_df2)
+
+tax_df <- read.csv("https://raw.githubusercontent.com/&lt;USER&gt;/&lt;REPO&gt;/main/data/tax_df.csv", row.names = 1)
+tax_df2 <- read.csv("https://raw.githubusercontent.com/&lt;USER&gt;/&lt;REPO&gt;/main/data/tax_df2.csv", row.names = 1)
+
+sample_df <- read.table("https://raw.githubusercontent.com/&lt;USER&gt;/&lt;REPO&gt;/main/data/meta_df.txt",
+                        sep = "	", header = TRUE)
+sample_df2 <- read.table("https://raw.githubusercontent.com/&lt;USER&gt;/&lt;REPO&gt;/main/data/meta_df2.txt",
+                         sep = "	", header = TRUE)
+</code></pre>
+
+<hr>
+
+<h2>4. Network Construction Methods</h2>
+
+<p>This tutorial covers:</p>
+
+<ol>
+<li>Co-occurrence probability (Veech model)</li>
+<li>Spearman correlation</li>
+<li>Jaccard similarity</li>
+<li>Bray–Curtis similarity</li>
+</ol>
+
+<hr>
+
+<h2>5. Probabilistic Co-Occurrence Network (Veech Model)</h2>
+
+<h3>5.1 Convert to presence/absence</h3>
+
+<pre><code class="language-r">otu_prob <- otu_df
+otu_prob[otu_prob > 0] <- 1
+bac_prob <- as.matrix(otu_prob)
+occurs_prob <- crossprod(bac_prob)
+</code></pre>
+
+<h3>5.2 Veech probability function</h3>
+
+<pre><code class="language-r">Veech_calc <- function(N, j, N1, N2){
+  (choose(N, j) * choose(N - j, N2 - j) * choose(N - N2, N1 - j)) /
+    (choose(N, N2) * choose(N, N1))
+}
+</code></pre>
+
+<h3>5.3 Compute probabilities</h3>
+
+<pre><code class="language-r">res <- matrix(NA, ncol(bac_prob), ncol(bac_prob))
+
+for (i in 1:nrow(occurs_prob)) {
+  for (j in 2:ncol(occurs_prob)) {
+    if (j <= i) next
+    out <- 0
+    cooc <- occurs_prob[i,j] - 1
+    for (k in 0:cooc) {
+      out <- out + Veech_calc(nrow(bac_prob), k, occurs_prob[j,j], occurs_prob[i,i])
+    }
+    res[i,j] <- out
+  }
+}
+</code></pre>
+
+<h3>5.4 Filter significant associations</h3>
+
+<pre><code class="language-r">pos_prob <- subset(melt(res), value >= 0.95)
+colnames(pos_prob) <- c("Source", "Target", "value")
+
+pos_prob$Source <- colnames(bac_prob)[pos_prob$Source]
+pos_prob$Target <- colnames(bac_prob)[pos_prob$Target]
+</code></pre>
+
+<h3>5.5 Build and plot network</h3>
+
+<pre><code class="language-r">metanet_prob <- graph_from_data_frame(pos_prob[,1:2], directed = FALSE)
+
+set.seed(1)
+layout_prob <- layout_with_fr(metanet_prob)
+plot(metanet_prob, vertex.size = 5, vertex.label = NA,
+     edge.color = "gray70", layout = layout_prob)
+</code></pre>
+
+<hr>
+
+<h2>6. Correlation-Based Networks (Spearman)</h2>
+
+<pre><code class="language-r">sp.corr <- rcorr(as.matrix(otu_df), type = "spearman")
+sp.corr.r <- sp.corr$r
+sp.corr.p <- sp.corr$P
+
+sp.corr.r[sp.corr.p > 0.05] <- 0
+sp.corr.r[sp.corr.r < 0.5] <- 0
+
+pos_corr <- melt(sp.corr.r)
+pos_corr <- subset(pos_corr, value != 0)
+</code></pre>
+
+<hr>
+
+<h2>7. Distance-Based Networks (Jaccard & Bray–Curtis)</h2>
+
+<h3>7.1 Jaccard similarity</h3>
+
+<pre><code class="language-r">sim.jacc <- 1 - as.matrix(vegdist(t(otu_df), 
+                                  method = "jaccard", 
+                                  binary = TRUE))
+</code></pre>
+
+<h3>7.2 Bray–Curtis similarity</h3>
+
+<pre><code class="language-r">sim.bc <- 1 - as.matrix(vegdist(t(otu_df), method = "bray"))
+</code></pre>
+
+<hr>
+
+<h2>8. Comparing Networks</h2>
+
+<ul>
+<li>Jaccard edge overlap</li>
+<li>Overlap coefficient</li>
+<li>Modularity</li>
+<li>Clustering coefficient</li>
+<li>Edge density</li>
+</ul>
+
+<hr>
+
+<h2>9. Case Study</h2>
+
+<p>Reconstruct networks for two datasets and compare:</p>
+
+<ul>
+<li>Global structure</li>
+<li>Sample subnetworks</li>
+<li>Module completeness</li>
+<li>Metadata relationships</li>
+</ul>
+
+<hr>
+
+<h2>10. Conclusions</h2>
+
+<p>This workflow provides a reproducible pipeline for constructing and comparing microbial networks.</p>
+
+<hr>
+
+<h2>11. References</h2>
+
+<ul>
+<li>Layeghifard et al., 2018</li>
+<li>Röttjers & Faust, 2018</li>
+<li>Faust & Raes, 2012</li>
+<li>Veech, 2013</li>
+<li>Hernandez et al., 2021</li>
+</ul>
+
+<\div>
+    </section>
+  </article>
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Miguel de Celis</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

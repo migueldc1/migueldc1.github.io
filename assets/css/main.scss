@@ -5,17 +5,20 @@ search: false
 
 @charset "utf-8";
 
-body.home-page {
-  /* Default body text color */
-  color: #2e2d2d;
-
-  /* Links */
-  a {
-    color: #3d3d3d;
-    &:hover {
-      color: #004499;
+body {
+    /* Default body text color */
+    color: #2e2d2d;
+    
+    /* Links */
+    a {
+        color: #3d3d3d;
+        &:hover {
+            color: #572753;
+        }
     }
-  }
+    a:visited {
+        color: #572753;
+    }
     .page__title a {
         color: #000000;
         text-decoration: none;
@@ -66,7 +69,7 @@ body.research-page {
   a {
     color: #3d3d3d;
     &:hover {
-      color: #004499;
+      color: #572753;
     }
   }
     .page__title a {
@@ -183,4 +186,9 @@ body.home-page .page__hero--overlay {
         font-size: 1.2rem;
         text-align: center;
     }
+}
+
+.btn--primary:hover {
+  background-color: #572753;
+  color: #fff;
 }

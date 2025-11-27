@@ -9,4 +9,8 @@ main:
   - title: "Outreach"
     url: /outreach/
     description: "Outreach"
-    
+  - title: "Workshops"
+    sublinks:
+      - title: "Local Network Analysis"
+        url: /network/
+        description: "Local Network Analysis"
